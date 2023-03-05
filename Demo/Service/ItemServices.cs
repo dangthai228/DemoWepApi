@@ -4,14 +4,20 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 
+
 namespace Demo.Service
 {
     public interface IitemService
     {
         DbResult<dynamic> ChangeStatus(int idtype, int status);
+
+        
     }
+
+
     public class ItemServices : IitemService
     {
+
         public DbResult<dynamic> ChangeStatus (int id,int status )
         {
             DbResult<dynamic>  res = new DbResult<dynamic> ();
@@ -47,5 +53,17 @@ namespace Demo.Service
         }
 
        
+    }
+
+    public class ItemA : IitemService
+    {
+        public DbResult<dynamic> ChangeStatus(int id, int status)
+        {
+            DbResult<dynamic> res = new DbResult<dynamic>();
+            res.Status = 0;
+            res.Data = 123;
+            return res;
+
+        }
     }
 }

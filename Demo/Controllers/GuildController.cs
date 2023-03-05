@@ -6,19 +6,21 @@ using Org.BouncyCastle.Crypto.Engines;
 using System;
 using System.Collections.Generic;
 
+
 namespace Demo.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class GuildController : ControllerBase
     {
-        private IGuildServices _guildservice;
+        private readonly IGuildServices _guildservice;
 
         public GuildController(IGuildServices guildservice)
         {
             _guildservice = guildservice;
         }
 
+       
         [HttpPost("taoconghoi")]
         public IActionResult CreateGuild( CreateGuild guild)
         {

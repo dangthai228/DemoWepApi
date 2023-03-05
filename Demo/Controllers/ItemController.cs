@@ -4,6 +4,8 @@ using Google.Protobuf.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using Microsoft.Extensions.DependencyInjection;
+using Demo.Factory;
 
 namespace Demo.Controllers
 {
@@ -11,17 +13,19 @@ namespace Demo.Controllers
     [Route("api/[controller]")]
     public class ItemController : ControllerBase
     {
-        private IitemService _itemservice;
+        private readonly IServiceFactory _serviceFactory;
 
-        public ItemController(IitemService itemservice)
+        public ItemController(IServiceFactory serviceFactory)
         {
-            _itemservice = itemservice;
+            _serviceFactory = serviceFactory;
         }
+        
 
         [HttpPut("changeitem/{inventoryid}/{status}")]
         public IActionResult ChangeStatus (int inventoryid, int status)
         {
-            dynamic res = _itemservice.ChangeStatus(inventoryid, status);
+            var itemservice = _serviceFactory.GetInstance("sv1");
+            dynamic res = itemservice.ChangeStatus(inventoryid, status);
             return Ok( res);
         }
     }

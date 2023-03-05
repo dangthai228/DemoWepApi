@@ -1,3 +1,5 @@
+using Demo.Controllers;
+using Demo.Factory;
 using Demo.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -43,9 +45,12 @@ namespace Demo
                 };
             });
             services.AddControllers().AddNewtonsoftJson();
-            services.AddScoped<IAccountService, AccountService>();
-            services.AddScoped<IitemService, ItemServices>();
-            services.AddScoped<IGuildServices, GuildService>();
+            services.AddTransient<IAccountService, AccountService>();
+            services.AddTransient<IitemService , ItemServices>();
+            services.AddTransient<IitemService, ItemA>();
+            services.AddTransient<IGuildServices, GuildService>();
+
+            services.AddTransient<IServiceFactory, ServiceFactoryImpl>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo

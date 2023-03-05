@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\Github\\BranchWepAPi\\DemoWepApi\\Demo\\Demo.csproj": {}
+    "C:\\Users\\Admin\\Documents\\Github\\DemoApiWeb\\DemoWepApi\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\Github\\BranchWepAPi\\DemoWepApi\\Demo\\Demo.csproj": {
+    "C:\\Users\\Admin\\Documents\\Github\\DemoApiWeb\\DemoWepApi\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Github\\BranchWepAPi\\DemoWepApi\\Demo\\Demo.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Github\\DemoApiWeb\\DemoWepApi\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "C:\\Users\\Admin\\Documents\\Github\\BranchWepAPi\\DemoWepApi\\Demo\\Demo.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\Github\\DemoApiWeb\\DemoWepApi\\Demo\\Demo.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\Github\\BranchWepAPi\\DemoWepApi\\Demo\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\Github\\DemoApiWeb\\DemoWepApi\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
